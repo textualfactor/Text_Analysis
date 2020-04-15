@@ -6,7 +6,7 @@ import timeit
 '''
 Load dictionary, bow and clusters to perform SVD on.
 '''
-cluster_path ='./mdna_google_cluster50_processed.npy'
+cluster_path ='./google_cluster50_processed.npy'
 dictionary_path = 'all_dictionary'
 bow_path = 'all_bag_words.npy'
 clusters = np.load(cluster_path, allow_pickle=True)
