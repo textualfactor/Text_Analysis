@@ -20,7 +20,7 @@ def tokenize(wdir, output):
     for num, file in enumerate(sorted(os.listdir(wdir))):
         try:
             openfile = codecs.open(wdir + file, 'r', encoding='utf-8', errors='ignore')
-            file_name= '99_' + file[:10]
+            file_name= file[:10]
             text = openfile.read()
             soup = BeautifulSoup(text,'html.parser')
             raw = BeautifulSoup.get_text(soup)
@@ -42,9 +42,9 @@ def tokenize(wdir, output):
                 print(str(num)+' done!  time:'+str(time.time()-start))
         except:
             print('file {} skipped'.format(num))
-    df = pd.read_csv('output_mdna99.csv')
+    df = pd.read_csv(output)
     df = df.dropna()
-    df.to_csv('output_mdna99.csv',index=False) 
+    df.to_csv(output,index=False) 
     
     
 
