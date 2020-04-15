@@ -42,7 +42,6 @@ def tokenize(wdir, output):
                 print(str(num)+' done!  time:'+str(time.time()-start))
         except:
             print('file {} skipped'.format(num))
-    tokenize()
     df = pd.read_csv('output_mdna99.csv')
     df = df.dropna()
     df.to_csv('output_mdna99.csv',index=False) 

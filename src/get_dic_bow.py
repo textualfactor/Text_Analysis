@@ -47,7 +47,7 @@ def create_bag_of_words(doc_dict,dic):
     return arr
 
 
-def main():
+def dic_bow():
     colnames = ['document', 'word', 'counts']
     df = pd.read_csv(csv_path, names=colnames)
     doc_dict = df_to_dict(df)
@@ -60,13 +60,13 @@ def main():
     #print('create_dictionary ({} trials):'.format(n),timeit.timeit(lambda : create_dictionary(doc_dict),number = n))
     #print('create_bag_of_words ({} trials):'.format(n),timeit.timeit(lambda : create_bag_of_words(doc_dict,dic),number = n))
 
-if __name__ == '__main__':
-    #naming schemes for csv, dic, and npy files
-    title = 'all'
-    csv_path = 'output/output_' + title + '.csv'
-    dic_path = title + '_dictionary'
-    npy_path = title + '_bag_words.npy'
-    main()
-    
+#if __name__ == '__main__':
+#    #naming schemes for csv, dic, and npy files
+#    title = 'all'
+#    csv_path = 'output/output_' + title + '.csv'
+#    dic_path = title + '_dictionary'
+#    npy_path = title + '_bag_words.npy'
+#    main()
+#    
     #timer for entire program
     #print(timeit.timeit(main,number=10))
