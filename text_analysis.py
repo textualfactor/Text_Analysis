@@ -17,29 +17,27 @@ from SVD_doc_loading import *
 from SVD_topic_importance import *
 
 
-#wdir = './data/'
-#output = './output/output_all.csv'
-#
-#
-#cluster_size=50
-#
-#t1 = threading.Thread(target=tokenize, args=(wdir, output)) 
-#t2 = threading.Thread(target=google_cluster, args=(cluster_size,)) 
-#
-#t1.start() 
-#t2.start() 
-#
-#t1.join()
-#t2.join()
-#
-#cluster_process()
-#
-#
-##naming schemes for csv, dic, and npy files
-#title = 'all'
-#csv_path = 'output/output_' + title + '.csv'
-#dic_path = title + '_dictionary'
-#npy_path = title + '_bag_words.npy'
-#dic_bow()
-#SVD_doc_load()
+wdir = './data/'
+output = './output/output_all.csv'
+
+
+cluster_size=50
+
+t1 = threading.Thread(target=tokenize, args=(wdir, output)) 
+t2 = threading.Thread(target=google_cluster, args=(cluster_size,)) 
+
+t1.start() 
+t2.start() 
+
+t1.join()
+t2.join()
+
+cluster_process()
+
+title = 'all'
+csv_path = 'output/output_' + title + '.csv'
+dic_path = title + '_dictionary'
+npy_path = title + '_bag_words.npy'
+dic_bow()
+SVD_doc_load()
 SVD_topic_importance()
