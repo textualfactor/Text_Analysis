@@ -12,9 +12,14 @@ The repository is organized in the following way:
 
 ### Install
 
-This project uses [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/), [FALCONN](https://github.com/falconn-lib/falconn/wiki) and [gensim](https://radimrehurek.com/gensim/). Users should also download Google's pre-trained word2vec embeddings of words and phrases [here](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit) and place the file in the directory of this project. 
+This project uses [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/), [FALCONN](https://github.com/falconn-lib/falconn/wiki) and [gensim](https://radimrehurek.com/gensim/). This version of the code also uses Google's pre-trained word2vec embeddings of words and phrases to generate clusters, so users should download them [here](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit) and place the file in the directory of this project. 
 
 ### Usage and Relevant Output
+
+To run textual-factor analysis: 
+```sh
+$ python3 text_analysis.py
+```
 
 #### Update from previous version
 
