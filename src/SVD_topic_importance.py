@@ -5,6 +5,7 @@ import csv
 import operator
 import pickle
 
+# This is called in text_analysis.
 
 
 def SVD_topic_importance():
