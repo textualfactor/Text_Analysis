@@ -12,7 +12,7 @@ The repository is organized in the following way:
 
 ### Install
 
-
+This project uses [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/), [FALCONN](https://github.com/falconn-lib/falconn/wiki) and [gensim](https://radimrehurek.com/gensim/). 
 
 ### Usage and Relevant Output
 
