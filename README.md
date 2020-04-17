@@ -21,6 +21,14 @@ To run textual-factor analysis:
 $ python3 text_analysis.py
 ```
 
+Relevant output includes:
+
+* ``google_cluster_50.txt`` contains word clusters generated with Algorithm 2 in Cong, Liang and Zhang (2019), i.e. hierarchical clustering with cluster size parameter equal to 50.
+
+* ``google_cluster50_processed.txt`` final clusters after intersecting the generated clusters with the corpus vocabulary and removing repeated and stopped words. 
+
+* ``50document_loadings_google.csv``contains 
+
 #### Update from previous version
 
 * This code is abstracted version of the old code.
