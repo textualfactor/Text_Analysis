@@ -68,7 +68,7 @@ def SVD_doc_load():
     Save the clusters that performed SVD
     ''' 
     clusters_used = np.delete(clusters, error_list)
-    np.save('mdna_all_google_50_used.npy', clusters_used)
+    np.save('google_50_used.npy', clusters_used)
     
     '''
     Write clusters' document loadings to a csv file, 
@@ -78,7 +78,7 @@ def SVD_doc_load():
     for cluster in clusters_used:
         row_label.append(cluster[0])
     df = pd.DataFrame(doc_ldings_np, columns = docs, index=row_label)
-    df.to_csv('mdna_all_50document_loadings_google.csv')
+    df.to_csv('50document_loadings_google.csv')
 
 
 
