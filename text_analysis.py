@@ -23,7 +23,9 @@ output = './output/output_all.csv'
 
 cluster_size=50
 
+# tokenize textual data
 t1 = threading.Thread(target=tokenize, args=(wdir, output)) 
+# generate clusters with google pre-trained vectors
 t2 = threading.Thread(target=google_cluster, args=(cluster_size,)) 
 
 t1.start() 
@@ -32,12 +34,18 @@ t2.start()
 t1.join()
 t2.join()
 
+# process the generated clusters: take intersection with textual data; remove repeated words; remove stopped words
 cluster_process()
 
 title = 'all'
 csv_path = 'output/output_' + title + '.csv'
 dic_path = title + '_dictionary'
 npy_path = title + '_bag_words.npy'
+
+# create dictionary and bow used for SVD
 dic_bow()
+
+# generate loadings of factors on documents with SVD
 SVD_doc_load()
+# calculate importance of the factors and report the first 500
 SVD_topic_importance()
