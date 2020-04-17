@@ -25,9 +25,9 @@ Relevant output includes:
 
 * ``google_cluster_50.txt`` contains word clusters generated with Algorithm 2 in Cong, Liang and Zhang (2019), i.e. hierarchical clustering with cluster size parameter equal to 50.
 
-* ``google_cluster50_processed.txt`` final clusters after intersecting the generated clusters with the corpus vocabulary and removing repeated and stopped words. 
+* ``google_cluster50_processed.txt`` contains final clusters after intersecting the generated clusters with the corpus vocabulary and removing repeated and stopped words. 
 
-* ``50document_loadings_google.csv``contains factors' beta loadings on the documents in the corpus derived with Algorithm 4 in Cong, Liang and Zhang (2019), i.e. SVD.
+* ``50document_loadings_google.csv``contains factors' beta loadings on the documents in the corpus derived by Algorithm 4 in Cong, Liang and Zhang (2019), i.e. SVD.
 
 * ``top500_important_clusters_google50_avg.csv`` contains the 500 most important factors given by Algorithm 4 in Cong, Liang and Zhang (2019). 
 
