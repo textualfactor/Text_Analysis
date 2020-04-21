@@ -34,6 +34,6 @@ Relevant output includes:
 
 #### Update from previous version
 
-* This code is abstracted version of the old code.
+* This code is an abstracted version of the old code.
 
-* The tokenization and clustering is multithreaded.
+* The tokenization and clustering are multithreaded.
